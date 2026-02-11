@@ -15,14 +15,14 @@ if page == "Home":
     .big-title {
         font-size: 60px;
         font-weight: 900;
-        color: #0f507a;
+        color: #fafafa;
         line-height: 1.1;
         display: inline-block;
         vertical-align: middle;
     }
     .subtitle {
         font-size: 35px;
-        color: #171515 !important;
+        color: #fafafa ;
         text-align: center;
         margin-top: 10px;
         margin-bottom: 50px;
