@@ -5,8 +5,58 @@ import matplotlib.pyplot as plt
 
 st.set_page_config(page_title="Cyber Attack Detection", layout="wide")
 
-st.sidebar.title(" Cyber Attack Detection System")
-page = st.sidebar.selectbox("Go to", ["Prediction Interface", "Data Dashboard"])
+
+page = st.sidebar.selectbox("Navigation", ["Home", "Prediction Interface", "Data Dashboard"])
+
+
+if page == "Home":
+    st.markdown("""
+    <style>
+    .big-title {
+        font-size: 60px;
+        font-weight: 900;
+        color: #0f507a;
+        line-height: 1.1;
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .subtitle {
+        font-size: 35px;
+        color: #171515 !important;
+        text-align: center;
+        margin-top: 10px;
+        margin-bottom: 50px;
+    }
+    .header-row {
+        display: flex;
+        align-items: center;
+        gap: 25px;
+        margin-bottom: 20px;
+    }
+    </style>
+    """, unsafe_allow_html=True)
+
+    # Use st.columns to align logo and title
+    col_logo, col_title = st.columns([1, 4])
+    with col_logo:
+        st.image("logo.png", width=130)
+    with col_title:
+        st.markdown('<div class="big-title">AZURE ANOMALY HUNTERS</div>', unsafe_allow_html=True)
+
+    # Subtitle centered
+    st.markdown("""
+    <div class="subtitle">
+        Hunting anomalies in network traffic, detecting threats before they strike.
+    </div>
+    """, unsafe_allow_html=True)
+
+    # Spacing before info boxes
+    st.markdown("<br><br>", unsafe_allow_html=True)
+
+    # Info boxes in columns
+    col1, col2 = st.columns(2)
+    col1.info("📊 AI-driven attack classification")
+    col2.info("⚡ Threat intelligence dashboard")
 
 
 # PAGE 1 =================
