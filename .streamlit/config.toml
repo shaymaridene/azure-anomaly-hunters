@@ -1,6 +1,6 @@
 [theme]
 primaryColor = "#234257"        # buttons, highlights
-backgroundColor = "#fafafa"     # page background
+backgroundColor = "#171515"     # page background
 secondaryBackgroundColor = "#1A4F72"
-textColor = "#171515"
+textColor = "fafafa"
 font = "sans serif"
