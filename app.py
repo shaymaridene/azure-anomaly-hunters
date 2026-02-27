@@ -13,59 +13,138 @@ page = st.sidebar.selectbox("Navigation", ["Home", "Prediction Interface", "Data
 
 
 if page == "Home":
+
     st.markdown("""
     <style>
-    .big-title {
-        font-size: 60px;
+
+    /* ===== HERO ===== */
+    .hero-title {
+        font-size: 58px;
         font-weight: 900;
-        color: #fafafa;
-        line-height: 1.1;
-    }
-    .title-container {
-        display: flex;
-        align-items: flex-start;  /* top alignment inside column */
-        height: 270px;            /* same height as logo for reference */
-    }
-    .subtitle {
-        font-size: 35px;
-        color: #fafafa;
         text-align: center;
-        margin-top: 10px;
-        margin-bottom: 50px;
+        color: #FFFFFF;
+        margin-bottom: 10px;
+    }
+
+    .subtitle {
+        font-size: 24px;
+        text-align: center;
+        color: #C9D1D9;
+        margin-bottom: 40px;
+    }
+
+    
+
+    .section-title {
+        font-size: 26px;
+        font-weight: 700;
+        margin-bottom: 20px;
+        color: #58A6FF;
+    }
+
+    /* ===== TEAM GRID ===== */
+    .member {
+        padding: 8px 0;
+        font-size: 16px;
+    }
+
+    
+
+    </style>
+    """, unsafe_allow_html=True)
+
+    col1, col2, col3 = st.columns([1,3,1])
+
+    with col2:
+        st.image("logo.png", width=420)
+
+    st.markdown("""
+        <div class="hero-title">
+            Cyber Attack Detection Platform
+        </div>
+    """, unsafe_allow_html=True)
+    st.markdown("""
+        <div class="subtitle">
+            Real-time anomaly detection and intelligent threat classification powered by Machine Learning.
+    </div>
+    """, unsafe_allow_html=True)
+
+
+    st.markdown("""
+
+    <!-- Load Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+    .link-container {
+        display: flex;
+        gap: 20px; /* space between buttons */
+        justify-content: center; /* center horizontally */
+        margin-bottom: 20px;
+    }
+
+    .link-btn {
+        padding: 7px 10px;
+        background-color: #1A4F72;
+        border-radius: 10px;
+        text-decoration: none !important;
+        color: white;
+        font-weight: 600;
+        text-align: center;
+        transition: 0.2s;
+    }
+
+    .link-btn:hover {
+        background-color: #234257;
+        text-decoration: none !important;
     }
     </style>
     """, unsafe_allow_html=True)
 
-   
-    col1, col2, col3 = st.columns([1, 3, 1])
-
-    with col2:
-      st.image("logo.png", width=600)
-
-   
-
-    # Subtitle centered
     st.markdown("""
-    <div class="subtitle">
-        Hunting anomalies in network traffic, detecting threats before they strike.
+    <div class="link-container">
+        <a class="link-btn" href="https://github.com/your-repo" target="_blank">
+            <i class="fab fa-github"></i>
+            GitHub Repository 
+        </a>
+        <a class="link-btn" href="https://your-report.pdf" target="_blank">📄 Project Report</a>
     </div>
     """, unsafe_allow_html=True)
-
-    # Space before info boxes
     st.markdown("<br><br>", unsafe_allow_html=True)
+    
+    # team
+    st.markdown('<div class="section-title">👥 Team</div>', unsafe_allow_html=True)
 
-    # Info boxes
-    col1, col2 = st.columns(2)
-    col1.info("📊 AI-driven attack classification")
-    col2.info("⚡ Threat intelligence dashboard")
+    team_1, team_2 = st.columns(2, gap="large")
 
+    with team_1:
+     st.markdown("""
+        <div class="member">⚙️ Vu Anh Dinh — Data Engineer</div>
+        <div class="member">⚙️ Shayma Ridene — Data Engineer</div>
+        <div class="member">⚙️ Wassim Elmoufakkir — Data Engineer</div>
+        <div class="member">⚙️ Abdellahi Abdellahi — Data Engineer</div>
+     """, unsafe_allow_html=True)
 
-# PAGE 1 =================
+    with team_2:
+        st.markdown("""
+        <div class="member">🧠 Lina Thuresson — Data Analyst</div>
+        <div class="member">🧠 Sai Aditya Lakkum — Data Scientist</div>
+        <div class="member">🧠 Tuan Nam Pham — Data Scientist</div>
+        """, unsafe_allow_html=True)
+        
+    st.markdown("<br><br>", unsafe_allow_html=True)
+    
+    f1, f2, f3 = st.columns(3)
+
+    f1.success("🧠 ML-based Attack Classification")
+    f2.info("📊 SOC-style Monitoring Dashboard")
+    f3.warning("⚡ Real-time Threat Insights")
+
+# PAGE 1 
 if page == "Prediction Interface":
     
-
     st.title("Cybersecurity Attack Type Detection ")
-
+    
     # CSV Upload 
     st.divider()
     st.header(" Batch Prediction via CSV")
@@ -84,8 +163,6 @@ if page == "Prediction Interface":
 
     st.divider()
 
-
-    # with colA:
     if st.button("Predict Attack Type"):
 
         if "df" not in st.session_state:
@@ -150,9 +227,8 @@ elif page == "Data Dashboard":
     else:
         df = st.session_state["df"]
 
-        # =========================
+        
         # OVERVIEW METRICS
-        # =========================
         st.subheader("Dataset Overview")
         col1, col2, col3 = st.columns(3)
         col1.metric("Records", len(df))
@@ -161,21 +237,16 @@ elif page == "Data Dashboard":
 
         st.divider()
 
-        # =========================
         # TARGET DISTRIBUTION
-        # =========================
         st.subheader("Attack Class Distribution")
         st.bar_chart(df["target"].value_counts())
 
-        # =========================
         # PROTOCOL DISTRIBUTION
-        # =========================
         st.subheader("Protocol Usage")
         st.bar_chart(df["protocol"].value_counts())
 
-        # =========================
+        
         # PACKET LENGTH DISTRIBUTION
-        # =========================
         st.subheader("Packet Length Distribution")
 
         fig1, ax1 = plt.subplots(figsize=(18,6))
@@ -183,9 +254,7 @@ elif page == "Data Dashboard":
         ax1.set_title("Packet Length Frequency")
         st.pyplot(fig1)
 
-        # =========================
         # ANOMALY SCORE DISTRIBUTION
-        # =========================
         st.subheader("Anomaly Score Distribution")
 
         fig2, ax2 = plt.subplots(figsize=(18,6))
@@ -193,15 +262,11 @@ elif page == "Data Dashboard":
         ax2.set_title("Anomaly Score Spread")
         st.pyplot(fig2)
 
-        # =========================
         # SEVERITY DISTRIBUTION
-        # =========================
         st.subheader("Severity Distribution")
         st.bar_chart(df["severity_encoded"].value_counts())
 
-        # =========================
         # CORRELATION HEATMAP
-        # =========================
         st.subheader("Feature Correlation Heatmap")
 
         numeric_df = df.select_dtypes(include=['int64', 'float64'])
