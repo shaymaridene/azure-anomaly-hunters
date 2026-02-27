@@ -103,7 +103,7 @@ if page == "Home":
 
     st.markdown("""
     <div class="link-container">
-        <a class="link-btn" href="https://github.com/your-repo" target="_blank">
+        <a class="link-btn" href="https://github.com/xbdxllxhi2/A25-machine-learning-project" target="_blank">
             <i class="fab fa-github"></i>
             GitHub Repository 
         </a>
