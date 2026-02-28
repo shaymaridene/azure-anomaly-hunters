@@ -114,11 +114,11 @@ if page == "Home":
          font-weight: 700;
          margin-bottom: 20px;
          color: #58A6FF;
-         margin-left: 60px;  /* moves the title to the right */
+         margin-left: 60px;  
      }
         .team-columns {
-        margin-left: 200px;  /* move team section to the right */
-        gap: 40px;          /* spacing between two columns */
+        margin-left: 180px;  
+        gap: 40px;          
         display: flex;
      }
 
