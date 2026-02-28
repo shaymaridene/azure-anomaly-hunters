@@ -42,11 +42,6 @@ if page == "Home":
         color: #58A6FF;
     }
 
-    /* ===== TEAM GRID ===== */
-    .member {
-        padding: 8px 0;
-        font-size: 16px;
-    }
 
     
 
@@ -112,25 +107,46 @@ if page == "Home":
     """, unsafe_allow_html=True)
     st.markdown("<br><br>", unsafe_allow_html=True)
     
-    # team
+    st.markdown("""
+        <style>
+        .section-title {
+         font-size: 26px;
+         font-weight: 700;
+         margin-bottom: 20px;
+         color: #58A6FF;
+         margin-left: 40px;  /* moves the title to the right */
+     }
+        .team-columns {
+        margin-left: 200px;  /* move team section to the right */
+        gap: 40px;          /* spacing between two columns */
+        display: flex;
+     }
+
+    .member {
+        padding: 8px 0;
+        font-size: 16px;
+     }
+    </style>
+    """, unsafe_allow_html=True)
+
     st.markdown('<div class="section-title">👥 Team</div>', unsafe_allow_html=True)
 
-    team_1, team_2 = st.columns(2, gap="large")
-
-    with team_1:
-     st.markdown("""
-        <div class="member">⚙️ Vu Anh Dinh — Data Engineer</div>
-        <div class="member">⚙️ Shayma Ridene — Data Engineer</div>
-        <div class="member">⚙️ Wassim Elmoufakkir — Data Engineer</div>
-        <div class="member">⚙️ Abdellahi Abdellahi — Data Engineer</div>
-     """, unsafe_allow_html=True)
-
-    with team_2:
-        st.markdown("""
-        <div class="member">🧠 Lina Thuresson — Data Analyst</div>
-        <div class="member">🧠 Sai Aditya Lakkum — Data Scientist</div>
-        <div class="member">🧠 Tuan Nam Pham — Data Scientist</div>
-        """, unsafe_allow_html=True)
+    # Wrap the two columns in a div for left margin
+    st.markdown("""
+    <div class="team-columns">
+        <div style="flex:1;">
+            <div class="member">⚙️ Vu Anh Dinh — Data Engineer</div>
+            <div class="member">⚙️ Shayma Ridene — Data Engineer</div>
+            <div class="member">⚙️ Wassim Elmoufakkir — Data Engineer</div>
+            <div class="member">⚙️ Abdellahi Abdellahi — Data Engineer</div>
+        </div>
+        <div style="flex:1;">
+            <div class="member">🧠 Lina Thuresson — Data Analyst</div>
+            <div class="member">🧠 Sai Aditya Lakkum — Data Scientist</div>
+            <div class="member">🧠 Tuan Nam Pham — Data Scientist</div>
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
         
     st.markdown("<br><br>", unsafe_allow_html=True)
     
