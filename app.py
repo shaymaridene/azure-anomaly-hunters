@@ -107,7 +107,7 @@ if page == "Home":
             <i class="fab fa-github"></i>
             GitHub Repository 
         </a>
-        <a class="link-btn" href="https://your-report.pdf" target="_blank">📄 Project Report</a>
+        <a class="link-btn" href="https://dstisas-my.sharepoint.com/:w:/g/personal/lina_thuresson_edu_dsti_institute/IQC_s4fGauooSKxDOcmfid9HAf314bl13OwQUbOQ_zl6RcM?e=mt5glj&wdOrigin=TEAMS-WEB.null_ns.rwc&wdExp=TEAMS-TREATMENT&wdhostclicktime=1772236896286&web=1" target="_blank">📄 Project Report</a>
     </div>
     """, unsafe_allow_html=True)
     st.markdown("<br><br>", unsafe_allow_html=True)
