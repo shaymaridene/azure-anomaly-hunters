@@ -107,7 +107,7 @@ if page == "Home":
             <i class="fab fa-github"></i>
             GitHub Repository 
         </a>
-        <a class="link-btn" href="file:///C:/Users/huawei/Downloads/Report_draft.pdf" target="_blank">📄 Project Report</a>
+        <a class="link-btn" href="https://drive.google.com/file/d/1QPxSA8fiMSFcmEWQGAJ68H_hcOR8nzyP/view?usp=sharing" target="_blank">📄 Project Report</a>
     </div>
     """, unsafe_allow_html=True)
     st.markdown("<br><br>", unsafe_allow_html=True)
