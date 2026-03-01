@@ -135,15 +135,15 @@ if page == "Home":
     st.markdown("""
     <div class="team-columns">
         <div style="flex:1;">
-            <div class="member">⚙️ Vu Anh Dinh — Data Engineer</div>
-            <div class="member">⚙️ Shayma Ridene — Data Engineer</div>
-            <div class="member">⚙️ Wassim Elmoufakkir — Data Engineer</div>
-            <div class="member">⚙️ Abdellahi Abdellahi — Data Engineer</div>
+            <div class="member"> Vu Anh Dinh — Data Engineer</div>
+            <div class="member"> Shayma Ridene — Data Engineer</div>
+            <div class="member"> Wassim Elmoufakkir — Data Engineer</div>
+            <div class="member"> Abdellahi Abdellahi — Data Engineer</div>
         </div>
         <div style="flex:1;">
-            <div class="member">🧠 Lina Thuresson — Data Analyst</div>
-            <div class="member">🧠 Sai Aditya Lakkum — Data Scientist</div>
-            <div class="member">🧠 Tuan Nam Pham — Data Scientist</div>
+            <div class="member"> Lina Thuresson — Data Analyst</div>
+            <div class="member"> Sai Aditya Lakkum — Data Scientist</div>
+            <div class="member"> Tuan Nam Pham — Data Scientist</div>
         </div>
     </div>
     """, unsafe_allow_html=True)
