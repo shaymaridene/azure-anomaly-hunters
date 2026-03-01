@@ -102,7 +102,7 @@ if page == "Home":
             <i class="fab fa-github"></i>
             GitHub Repository 
         </a>
-        <a class="link-btn" href="https://drive.google.com/file/d/1QPxSA8fiMSFcmEWQGAJ68H_hcOR8nzyP/view?usp=sharing" target="_blank">📄 Project Report</a>
+        <a class="link-btn" href="https://dstisas-my.sharepoint.com/:b:/g/personal/tuan-nam_pham_edu_dsti_institute/IQAVb1g-lNbRSZqlA_aCYV91Aax8VQLXdSpMQfn39g07fKY?e=Y5Rg5w" target="_blank">📄 Project Report</a>
     </div>
     """, unsafe_allow_html=True)
     st.markdown("<br><br>", unsafe_allow_html=True)
